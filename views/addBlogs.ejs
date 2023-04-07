@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head') %>
+    <title>add new vlog page</title>
+  </head>
+  <body>
+    <%- include('./partials/navbar') %>
+    <form method="post" action="/blog" enctype="multipart/form-data" >
+      <div class="mb-3 container">
+        <label for="title" class="form-label">cover image</label>
+        <input type="file" class="form-control" id="coverImage"
+        name="coverImage"
+      </div>
+      <div class="mb-3 container">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1"
+        name="title"
+      </div>
+      <div class="mb-3 container">
+        <label for="exampleFormControlTextarea1" class="form-label">Body</label>
+        <textarea
+          class="form-control p-0 m-0"
+          id="exampleFormControlTextarea1"
+          rows="3"
+          name="body"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+
+    <%- include('./partials/scripts') %>
+  </body>
+</html>
